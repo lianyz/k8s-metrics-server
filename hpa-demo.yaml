@@ -24,16 +24,16 @@ spec:
           limits:
             cpu: 100m
             memory: 20Mi
-  ---
-  apiVersion: v1
-  kind: Service
-  metadata:
-    name: nginx-hpa-svc
-    namespace: lianyz
-  spec:
-    ports:
-    - port: 80
-      protocol: TCP
-      targetPort: 80
-    selector:
-      app: nginx-hpa
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-hpa-svc
+  namespace: lianyz
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: nginx-hpa
